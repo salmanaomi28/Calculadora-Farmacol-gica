@@ -5,11 +5,11 @@ from flask import Flask, jsonify
 app = Flask(__name__)
 
 
-@app.route("/densidad/<string:volumen>/<string:masa>")
-def get_datosD(volumen,masa):
-    volumen = float(volumen)
+@app.route("/densidad/<string:peso>/<string:masa>")
+def get_datosD(peso,masa):
+    peso = float(peso)
     masa = float(masa)
-    densidad = masa/volumen
+    densidad = masa/peso
     return jsonify({ "densidad" : densidad})
 
 
